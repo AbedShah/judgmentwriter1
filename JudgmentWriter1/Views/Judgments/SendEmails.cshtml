@@ -1,0 +1,83 @@
+﻿@model JudgmentWriter1.Models.Judgment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Judgment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Court)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Court)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Judge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Judge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SideA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SideA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SideB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SideB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.facts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.facts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Decision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Decision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thejudgment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thejudgment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

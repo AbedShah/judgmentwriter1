@@ -1,0 +1,76 @@
+﻿@model IEnumerable<JudgmentWriter1.Models.Judgment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My judgments</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Court)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Judge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SideA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SideB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.facts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Decision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thejudgment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Court)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Judge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SideA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SideB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.facts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Decision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thejudgment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }) |
+            @Html.ActionLink("Send Email", "SendEmails", new { id=item.Id }) 
+        </td>
+    </tr>
+}
+
+</table>
